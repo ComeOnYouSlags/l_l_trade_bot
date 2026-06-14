@@ -4,19 +4,11 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-	"time"
+	h "tradebot/helpers"
 )
 
-func GetCurrentDateString() string {
-	return time.Now().Format("1970-01-01")
-}
-
-func GetCurrentTimeString() string {
-	return time.Now().Format("23:15:01")
-}
-
 func CreateLogFile(logDir string) (string, error) {
-	filename := GetCurrentDateString() + GetCurrentTimeString() + ".log"
+	filename := h.GetTimestamp() + ".log"
 	fullPath := filepath.Join(logDir, filename)
 
 	// Create directory if it doesn't exist

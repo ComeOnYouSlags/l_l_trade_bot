@@ -29,3 +29,9 @@ FOLLOW THE TREND STRATEGY
 
 PRICE > MEAN AND slope > 0 - BUY
 PRICE < MEAN AND clope < 0 - SELL
+
+
+
+# TESTS
+
+go test ./tests/ -v
